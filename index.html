@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Label Sales - Amazon Accelerator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#998f67',
+                            muted: '#A8873A',
+                            black: '#111317',
+                            gray: '#8C919A',
+                            light: '#F2F3F5',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png')",
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #C9A24D; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #A8873A; }
+        
+        .hero-text-gradient {
+            background: linear-gradient(135deg, #111317 0%, #333 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #C9A24D 0%, #A8873A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Custom Comparison Slider Styles */
+        .comparison-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .comparison-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .comparison-slider .resize-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+            border-right: 2px solid #C9A24D;
+        }
+        .handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #C9A24D;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: ew-resize;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 20;
+        }
+    </style>
+</head>
+<body class="bg-brand-white text-brand-black font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="header" class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-[1440px] mx-auto px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-48">
+                    <img class="w-full h-auto object-contain" src="http://leanlivingjourney.com/wp-content/uploads/2026/01/logoee-1.png" alt="Gold Label Sales logo horizontal gold text clean background" />
+                </div>
+            </a>
+
+            <!-- Menu -->
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#services" class="text-sm font-medium text-brand-black hover:text-brand-gold transition-colors">Services</a>
+                <a href="#results" class="text-sm font-medium text-brand-black hover:text-brand-gold transition-colors">Results</a>
+                <a href="#about" class="text-sm font-medium text-brand-black hover:text-brand-gold transition-colors">About</a>
+                <a href="#contact" class="text-sm font-medium text-brand-black hover:text-brand-gold transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA -->
+            <a href="#audit" class="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-brand-gold hover:bg-brand-muted transition-all duration-300 rounded-none transform hover:-translate-y-0.5 shadow-lg shadow-brand-gold/20">
+                Free Amazon Audit
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Option A Layout with Carousel Logic Placeholder) -->
+    <section id="hero" class="relative pt-32 pb-20 min-h-[850px] flex items-center overflow-hidden bg-brand-white">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#C9A24D_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto px-8 w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Content -->
+            <div class="space-y-8 max-w-xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-light rounded-full border border-gray-200">
+                    <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                    <span class="text-xs font-semibold tracking-wide uppercase text-brand-gray">Amazon Accelerator</span>
+                </div>
+
+                <!-- Headline Option A -->
+                <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-brand-black">
+                    We Run Amazon For Brands That Want <span class="font-serif italic text-brand-gold">Nothing</span> To Do With Amazon.
+                </h1>
+
+                <p class="text-lg text-brand-gray leading-relaxed max-w-md">
+                    See the repeatable system we've used to scale 16 brands — including one from <span class="text-brand-black font-semibold">$40k to $280k/month</span>.
+                </p>
+
+                <!-- Dictionary Definition Element -->
+                <div class="pl-6 border-l-2 border-brand-gold/30 my-8 py-2">
+                    <p class="font-serif italic text-brand-muted text-lg mb-1">ac·cel·er·a·tor <span class="text-xs font-sans not-italic text-brand-gray ml-2">/akˈseləˌrādər/ noun</span></p>
+                    <p class="text-brand-black font-medium">Your Amazon team. Without the payroll.</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start gap-4 pt-4">
+                    <a href="#audit" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-brand-black hover:bg-brand-gold transition-all duration-300 shadow-xl shadow-black/10 hover:shadow-brand-gold/20 min-w-[200px]">
+                        Get My Free Audit
+                    </a>
+                    <a href="#proof" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-brand-black bg-transparent border border-gray-200 hover:border-brand-black transition-all duration-300 min-w-[200px] group">
+                        See How We Did It 
+                        <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Visual - Iridescent 3D Element Concept -->
+            <div class="relative h-[600px] w-full flex items-center justify-center">
+                <div class="relative w-full h-full">
+                    <!-- Background blobs -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-brand-gold/10 to-transparent rounded-full blur-3xl"></div>
+                    
+                    <!-- Main 3D Abstract Image -->
+                    <div class="relative z-10 w-full h-full flex items-center justify-center">
+                        <img class="w-full h-full object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/15947824f7-ead55379f7b96403b853.png" alt="abstract 3d glass iridescent shapes gold and white clean minimal floating geometric structures professional corporate art white background" />
+                    </div>
+
+                    <!-- Floating Cards -->
+                    <div class="absolute top-20 right-10 bg-white/80 backdrop-blur-xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-white rounded-lg z-20 max-w-[200px] animate-[float_8s_ease-in-out_infinite_1s]">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 rounded bg-green-100 flex items-center justify-center text-green-600">
+                                <i class="fa-solid fa-arrow-trend-up text-xs"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-gray-500 uppercase font-bold">Revenue Growth</div>
+                                <div class="text-sm font-bold text-brand-black">+240% YoY</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-32 left-0 bg-white/80 backdrop-blur-xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-white rounded-lg z-20 max-w-[220px] animate-[float_7s_ease-in-out_infinite_2s]">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                                <i class="fa-solid fa-shield-halved text-xs"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-gray-500 uppercase font-bold">Brand Protection</div>
+                                <div class="text-sm font-bold text-brand-black">100% Buy Box</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section id="stats" class="border-y border-gray-100 bg-white relative z-20">
+        <div class="max-w-[1440px] mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                <div class="py-10 px-6 text-center group hover:bg-gray-50 transition-colors">
+                    <div class="text-4xl font-bold text-brand-black mb-2 group-hover:text-brand-gold transition-colors">10 Years</div>
+                    <div class="text-sm font-medium text-brand-gray uppercase tracking-wider">Exposed To Every Amazon Problem</div>
+                </div>
+                <div class="py-10 px-6 text-center group hover:bg-gray-50 transition-colors">
+                    <div class="text-4xl font-bold text-brand-black mb-2 group-hover:text-brand-gold transition-colors">16+ Brands</div>
+                    <div class="text-sm font-medium text-brand-gray uppercase tracking-wider">Under Management</div>
+                </div>
+                <div class="py-10 px-6 text-center group hover:bg-gray-50 transition-colors">
+                    <div class="text-4xl font-bold text-brand-black mb-2 group-hover:text-brand-gold transition-colors">$70M+</div>
+                    <div class="text-sm font-medium text-brand-gray uppercase tracking-wider">Sold on Amazon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-24 bg-brand-light relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-white skew-x-12 translate-x-20"></div>
+        
+        <div class="max-w-[1440px] mx-auto px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Left: Copy -->
+                <div class="lg:col-span-5 space-y-8">
+                    <span class="text-xs font-bold text-brand-gold tracking-[0.2em] uppercase border-b border-brand-gold pb-1">The Problem</span>
+                    
+                    <h2 class="text-4xl font-bold text-brand-black leading-tight">
+                        Your Amazon Channel is <span class="bg-red-50 text-red-600 px-2">Bleeding Money</span>. Here's Why.
+                    </h2>
+                    
+                    <p class="text-brand-gray text-lg leading-relaxed">
+                        You built a great brand. But Amazon? It's chaos. Unauthorized sellers are undercutting your pricing. You're losing the buy box on your own products. Your listings are a mess. And every month, you're leaving tens of thousands on the table.
+                    </p>
+
+                    <div class="pt-4 pb-4">
+                        <p class="text-xl font-serif italic text-brand-black border-l-4 border-brand-gold pl-4 py-2 bg-white shadow-sm">
+                            "Sound familiar? Here's what we do about it."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Problems List -->
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Problem Item -->
+                        <div class="bg-white p-6 shadow-sm border border-gray-100 hover:border-red-200 transition-colors group">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-red-500 mb-4 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-users-slash"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-black mb-2">Unauthorized 3P Sellers</h3>
+                            <p class="text-sm text-brand-gray">Destroying your margins and brand reputation daily.</p>
+                        </div>
+
+                        <div class="bg-white p-6 shadow-sm border border-gray-100 hover:border-red-200 transition-colors group">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-red-500 mb-4 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-black mb-2">Losing the Buy Box</h3>
+                            <p class="text-sm text-brand-gray">On your own products. You do the marketing, they get the sale.</p>
+                        </div>
+
+                        <div class="bg-white p-6 shadow-sm border border-gray-100 hover:border-red-200 transition-colors group">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-red-500 mb-4 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-black mb-2">Broken Listings</h3>
+                            <p class="text-sm text-brand-gray">Images missing, descriptions wrong, conversion rates tanking.</p>
+                        </div>
+
+                        <div class="bg-white p-6 shadow-sm border border-gray-100 hover:border-red-200 transition-colors group">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center text-red-500 mb-4 group-hover:bg-red-500 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <h3 class="font-bold text-brand-black mb-2">Pricing Chaos</h3>
+                            <p class="text-sm text-brand-gray">No MAP enforcement leading to a race to the bottom.</p>
+                        </div>
+                        
+                        <div class="col-span-1 md:col-span-2 bg-red-50 border border-red-100 p-6 flex items-center gap-4">
+                            <i class="fa-solid fa-triangle-exclamation text-red-500 text-xl"></i>
+                            <p class="font-medium text-red-900">Months of revenue lost while you try to figure it out.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white relative">
+        <div class="max-w-[1440px] mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-brand-gold tracking-[0.2em] uppercase">Three Ways To Fix It</span>
+                <h2 class="text-4xl font-bold text-brand-black mt-4">Partnership Models</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white border border-gray-100 p-8 flex flex-col h-full relative group overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gray-200 group-hover:bg-brand-gold transition-colors"></div>
+                    <div class="mb-6">
+                        <div class="text-xs font-bold text-brand-gray uppercase mb-2">Model 01</div>
+                        <h3 class="text-2xl font-bold text-brand-black mb-4">Brand Management</h3>
+                        <p class="text-lg font-serif italic text-brand-muted">"Keep Your Account. We Run Everything Else."</p>
+                    </div>
+                    <p class="text-brand-gray mb-8 flex-grow">
+                        You stay the seller of record. We take over listings, SEO, A+ content, PPC, catalog cleanup, and MAP enforcement. You keep control. We do the work.
+                    </p>
+                    <div class="border-t border-gray-100 pt-6 mt-auto">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold uppercase text-brand-gray">Investment</span>
+                            <span class="font-bold text-brand-black">10-15% of Rev</span>
+                        </div>
+                        <div class="text-xs text-brand-gray bg-gray-50 p-3 rounded mt-4">
+                            <strong>Best for:</strong> Brands doing $50k+/month who want expert execution without giving up their account.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-hover bg-brand-black text-white p-8 flex flex-col h-full relative transform md:-translate-y-4 shadow-2xl">
+                    <div class="absolute top-0 right-0 p-4">
+                        <i class="fa-solid fa-star text-brand-gold"></i>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-xs font-bold text-brand-gold uppercase mb-2">Model 02</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Amazon Accelerator</h3>
+                        <p class="text-lg font-serif italic text-brand-gold">"We Buy. We Sell. You Collect Checks."</p>
+                    </div>
+                    <p class="text-gray-400 mb-8 flex-grow">
+                        We purchase your inventory at wholesale and become your exclusive Amazon seller. We own the pricing, the buy box, and the growth. You get paid without the headaches.
+                    </p>
+                    <div class="border-t border-gray-800 pt-6 mt-auto">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold uppercase text-gray-500">Investment</span>
+                            <span class="font-bold text-white">Wholesale Partnership</span>
+                        </div>
+                        <div class="text-xs text-gray-300 bg-gray-800 p-3 rounded mt-4 border border-gray-700">
+                            <strong>Best for:</strong> Brands who want Amazon revenue without Amazon problems.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-hover bg-white border border-gray-100 p-8 flex flex-col h-full relative group overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gray-200 group-hover:bg-brand-gold transition-colors"></div>
+                    <div class="mb-6">
+                        <div class="text-xs font-bold text-brand-gray uppercase mb-2">Model 03</div>
+                        <h3 class="text-2xl font-bold text-brand-black mb-4">One-Time Fix</h3>
+                        <p class="text-lg font-serif italic text-brand-muted">"Done-For-You Amazon Rebuild."</p>
+                    </div>
+                    <p class="text-brand-gray mb-8 flex-grow">
+                        Full listing overhaul, brand registry, ASIN consolidation, PPC foundation, and a strategic playbook. We fix it, hand it back, and you take it from there.
+                    </p>
+                    <div class="border-t border-gray-100 pt-6 mt-auto">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold uppercase text-brand-gray">Investment</span>
+                            <span class="font-bold text-brand-black">From $14,999</span>
+                        </div>
+                        <div class="text-xs text-brand-gray bg-gray-50 p-3 rounded mt-4">
+                            <strong>Best for:</strong> Brands who have internal resources but need expert setup.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section (With Comparison Slider) -->
+    <section id="proof" class="py-24 bg-brand-light">
+        <div class="max-w-[1440px] mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Interactive Comparison -->
+                <div class="relative h-[600px] w-full bg-white shadow-2xl rounded-lg overflow-hidden border border-gray-200 group">
+                    <!-- Custom Image Comparison Slider Implementation -->
+                    <div class="comparison-slider" id="comparisonSlider">
+                        <!-- After Image (Background) -->
+                        <div class="w-full h-full absolute inset-0">
+                             <div class="absolute top-6 right-6 z-10 bg-brand-gold text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded">After</div>
+                             <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bfd1e887f6-77a462d97c6c36beefb5.png" alt="amazon product listing page high conversion perfect A+ content optimized images clean layout professional 5 stars" />
+                        </div>
+                        
+                        <!-- Before Image (Foreground, Resizable) -->
+                        <div class="resize-image" id="resizeImage">
+                            <div class="absolute top-6 left-6 z-10 bg-gray-800 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded">Before</div>
+                            <img class="w-full h-full object-cover grayscale opacity-80" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/652ebd4189-c2a75e8c12270b7bbf22.png" alt="amazon product listing page bad quality blurry images messy text low rating chaotic layout" />
+                        </div>
+                        
+                        <!-- Handle -->
+                        <div class="handle" id="sliderHandle">
+                            <i class="fa-solid fa-arrows-left-right text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="space-y-8">
+                    <span class="text-xs font-bold text-brand-gold tracking-[0.2em] uppercase">Proof</span>
+                    
+                    <h2 class="text-4xl font-bold text-brand-black">
+                        $40k to $280k/Month.<br>
+                        <span class="text-brand-gray font-serif italic font-normal">Here's Exactly What Changed.</span>
+                    </h2>
+
+                    <div class="flex items-end gap-4 py-4 border-b border-gray-200">
+                        <div>
+                            <div class="text-sm text-brand-gray uppercase mb-1">Before</div>
+                            <div class="text-2xl font-bold text-gray-400">$40k/mo</div>
+                        </div>
+                        <div class="mb-2 text-brand-gold"><i class="fa-solid fa-arrow-right-long"></i></div>
+                        <div>
+                            <div class="text-sm text-brand-gold uppercase mb-1 font-bold">After</div>
+                            <div class="text-4xl font-bold text-brand-black">$280k/mo</div>
+                        </div>
+                        <div class="mb-2 ml-2 px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">+600% Growth</div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-brand-black">What we fixed:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                                <span class="text-brand-gray">Rebuilt 47 product listings from scratch</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                                <span class="text-brand-gray">Removed 12 unauthorized sellers</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                                <span class="text-brand-black font-medium bg-brand-gold/10 px-1">Took buy box ownership from 34% to 98%</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                                <span class="text-brand-gray">Implemented proper FBA strategy</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                                <span class="text-brand-gray">Restructured PPC to 22% ACoS</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6">
+                        <a href="#" class="text-brand-black font-bold border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-colors">See The Full Breakdown</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="py-20 bg-brand-black text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-[1440px] mx-auto px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">See your Amazon channel the way an industry veteran sees it.</h2>
+            <p class="text-xl text-gray-400 font-serif italic mb-8">Most brands never have.</p>
+            <div class="inline-block p-[1px] bg-gradient-to-r from-brand-gold to-white rounded-full">
+                <a href="#audit" class="block px-8 py-3 bg-brand-black rounded-full hover:bg-gray-900 transition-colors font-bold text-white">
+                    Get The Veteran's View
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="py-24 bg-white">
+        <div class="max-w-[1440px] mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-brand-gold tracking-[0.2em] uppercase">Is This You?</span>
+                <h2 class="text-4xl font-bold text-brand-black mt-4">This is NOT for Everyone.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-100 shadow-lg max-w-5xl mx-auto">
+                <!-- Left: For You -->
+                <div class="p-10 bg-white border-r border-gray-100">
+                    <h3 class="text-xl font-bold text-brand-black mb-8 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-green-500"></i>
+                        This is for you if:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-brand-gray">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2"></span>
+                            Your products are already on Amazon (even if it's a mess)
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-gray">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2"></span>
+                            You're doing $25k+/month in revenue somewhere
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-gray">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2"></span>
+                            You're tired of fighting unauthorized sellers
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-gray">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2"></span>
+                            You want to grow Amazon without babysitting it
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-black font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2"></span>
+                            You're ready to make a decision, not "think about it"
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: NOT For You -->
+                <div class="p-10 bg-gray-50">
+                    <h3 class="text-xl font-bold text-gray-400 mb-8 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-xmark text-red-400"></i>
+                        This is NOT for you if:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-red-300 mt-2"></span>
+                            You're looking for the cheapest option
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-red-300 mt-2"></span>
+                            You won't enforce MAP pricing
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-red-300 mt-2"></span>
+                            You want to "just run some ads"
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-red-300 mt-2"></span>
+                            Amazon isn't a real priority for your business
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-red-300 mt-2"></span>
+                            You need to "run it by" 6 people before deciding
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Offer / Audit -->
+    <section id="audit" class="py-24 bg-white relative">
+        <div class="max-w-[1440px] mx-auto px-8">
+            <div class="bg-brand-black rounded-2xl overflow-hidden shadow-2xl relative">
+                <!-- Decorative Elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-12 lg:p-16 relative z-10">
+                        <span class="inline-block px-3 py-1 bg-brand-gold text-white text-xs font-bold uppercase tracking-wider mb-6 rounded">Free</span>
+                        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                            Get Your Free Amazon Channel Audit <span class="text-gray-500 text-2xl line-through block mt-2 font-normal">(Normally $599)</span>
+                        </h2>
+                        
+                        <p class="text-gray-400 mb-8 max-w-md">
+                            No pitch. No pressure. Just answers. We'll identify every revenue leak and give you specific recommendations.
+                        </p>
+
+                        <div class="space-y-4 mb-10">
+                            <div class="flex items-center gap-3 text-white">
+                                <div class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xs">1</div>
+                                <span>Complete audit of your current Amazon presence</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-white">
+                                <div class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xs">2</div>
+                                <span>Identification of every revenue leak</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-white">
+                                <div class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xs">3</div>
+                                <span>Specific roadmap (whether you work with us or not)</span>
+                            </div>
+                        </div>
+
+                        <button class="w-full sm:w-auto px-8 py-4 bg-brand-gold hover:bg-white hover:text-brand-black text-white font-bold transition-all duration-300 rounded shadow-lg shadow-brand-gold/25">
+                            Request Your Free Audit
+                        </button>
+                        
+                        <p class="mt-4 text-xs text-gray-500">
+                            <i class="fa-regular fa-clock mr-1"></i> We audit 4 brands per month. If we're booked, we'll let you know.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-900 p-12 lg:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-gray-800">
+                        <div class="bg-gray-800/50 p-8 rounded-lg border border-gray-700">
+                            <h3 class="text-xl font-bold text-white mb-4">Risk Reversal</h3>
+                            <p class="text-gray-300 italic font-serif text-lg leading-relaxed">
+                                "If we can't find at least <span class="text-brand-gold font-sans font-bold">$10,000/year</span> in missed revenue, we'll tell you. And we'll tell you exactly what you should do instead — even if that's nothing."
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 flex items-center gap-4">
+                            <div class="flex -space-x-4">
+                                <img class="w-12 h-12 rounded-full border-2 border-gray-900" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6d0079dad7-80dcd7ae3c92edd6d1e6.png" alt="professional corporate headshot male executive" />
+                                <img class="w-12 h-12 rounded-full border-2 border-gray-900" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6d0079dad7-ee66b68dda9487f023a9.png" alt="professional corporate headshot female executive" />
+                                <div class="w-12 h-12 rounded-full border-2 border-gray-900 bg-brand-gold flex items-center justify-center text-white font-bold text-xs">
+                                    +14
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-400">
+                                <span class="text-white font-bold">16 Brands</span> scaled successfully.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-white border-t border-gray-100 py-16">
+        <div class="max-w-[1440px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="w-40">
+                     <img class="w-full h-auto object-contain" src="http://leanlivingjourney.com/wp-content/uploads/2026/01/logoee-1.png" alt="Gold Label Sales logo horizontal gold text clean background" />
+                </div>
+                <p class="text-brand-gray text-sm">
+                    10 Years. 16 Brands. $70M+ in Amazon Revenue Managed.
+                </p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end gap-4">
+                <a href="mailto:hello@goldlabelsales.com" class="text-brand-black hover:text-brand-gold font-medium transition-colors">
+                    hello@goldlabelsales.com
+                </a>
+                <p class="text-brand-gray text-xs">
+                    &copy; 2026 Gold Label Sales. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Slider Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('comparisonSlider');
+            const resizeImage = document.getElementById('resizeImage');
+            const handle = document.getElementById('sliderHandle');
+            let isDown = false;
+
+            function updateSlider(x) {
+                const rect = slider.getBoundingClientRect();
+                let position = ((x - rect.left) / rect.width) * 100;
+                
+                if (position < 0) position = 0;
+                if (position > 100) position = 100;
+                
+                resizeImage.style.width = `${position}%`;
+                handle.style.left = `${position}%`;
+            }
+
+            // Mouse events
+            handle.addEventListener('mousedown', () => isDown = true);
+            window.addEventListener('mouseup', () => isDown = false);
+            window.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                updateSlider(e.clientX);
+            });
+
+            // Touch events
+            handle.addEventListener('touchstart', () => isDown = true);
+            window.addEventListener('touchend', () => isDown = false);
+            window.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                updateSlider(e.touches[0].clientX);
+            });
+
+            // Click on slider to jump
+            slider.addEventListener('click', (e) => {
+                updateSlider(e.clientX);
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
